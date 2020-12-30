@@ -1,0 +1,534 @@
+{
+  "fullMemory": [
+    {
+      "start": "$0000000",
+      "end": "$0000000",
+      "description": "CPU port DDR"
+    },
+    {
+      "start": "$0000001",
+      "end": "$0000001",
+      "description": "CPU port data"
+    },
+    {
+      "start": "$0000002",
+      "end": "$000FFFF",
+      "description": "64KB Ram"
+    },
+    {
+      "start": "$0010000",
+      "end": "$001FFFF",
+      "description": "64KB Ram"
+    },
+    {
+      "start": "$0020000",
+      "end": "$0029FFF",
+      "description": "128kb rom",
+      "breakdown": [
+        {
+          "start": "$002A000",
+          "end": "$002BFFF",
+          "description": "8KB C64 BASIC ROM"
+        },
+        {
+          "start": "$002D000",
+          "end": "$002DFFF",
+          "description": "4KB C64 CHARACTER ROM"
+        },
+        {
+          "start": "$002E000",
+          "end": "$002FFFF",
+          "description": "8KB C64 KERNAL ROM"
+        },
+        {
+          "start": "$0030000",
+          "end": "$0031FFF",
+          "description": "16KB C65 DOS ROM"
+        },
+        {
+          "start": "$0032000",
+          "end": "$0035FFF",
+          "description": "8KB C65 BASIC ROM"
+        },
+        {
+          "start": "$0038000",
+          "end": "$003BFFF",
+          "description": "8KB C65 BASIC GRAPHICS ROM"
+        },
+        {
+          "start": "$003C000",
+          "end": "$003CFFF",
+          "description": "4KB C65 KERNAL/INTERFACE ROM"
+        },
+        {
+          "start": "$003E000",
+          "end": "$003FFFF",
+          "description": "8KB C65 KERNAL ROM"
+        }
+      ]
+    },
+    {
+      "start": "$4000000",
+      "end": "$7FFFFFFF",
+      "description": "Slow Device Memory",
+      "breakdown": [
+        {
+          "start": "$7010000",
+          "end": "$7010000",
+          "description": "",
+          "breakdown": [
+            {
+              "start": 0,
+              "end": 4,
+              "description": "Read /EXROM & /GAME signal probe count (MEGA65 R1 PCB only)"
+            },
+            {
+              "start": 5,
+              "end": 5,
+              "description": "Force assertion of /RESET on cartridge port"
+            },
+            {
+              "start": 6,
+              "end": 6,
+              "description": "Read cartridge force reset (1=reset)"
+            },
+            {
+              "start": 7,
+              "end": 7,
+              "description": "Read cartridge /EXROM flag"
+            }
+          ]
+        },
+        {
+          "start": "$7010001",
+          "end": "$7010001",
+          "description": "",
+          "breakdown": [
+            {
+              "start": 0,
+              "end": 0,
+              "description": "Invert joystick line polarity for joystick expander cartridge"
+            },
+            {
+              "start": 4,
+              "end": 4,
+              "description": "Force disabling of joystick expander cartridge"
+            },
+            {
+              "start": 5,
+              "end": 5,
+              "description": "Joystick read toggle flag DEBUG"
+            },
+            {
+              "start": 6,
+              "end": 6,
+              "description": "1=force joystick expansion mode."
+            },
+            {
+              "start": 7,
+              "end": 7,
+              "description": "Expansion port mode: 1=normal mode, 0=joystick expansion mode"
+            }
+          ]
+        },
+        {
+          "start": "$7010002",
+          "end": "$7010002",
+          "description": "Counter of /IRQ triggers from cartridge"
+        },
+        {
+          "start": "$7010003",
+          "end": "$7010003",
+          "description": "Counter of /NMI triggers from cartridge"
+        },
+        {
+          "start": "$7010004",
+          "end": "$7010004",
+          "description": "Counter of /DMA triggers from cartridge"
+        },
+        {
+          "start": "$7010005",
+          "end": "$7010005",
+          "description": "Counter of /GAME triggers from cartridge"
+        },
+        {
+          "start": "$7010006",
+          "end": "$7010006",
+          "description": "Counter of /EXROM triggers from cartridge"
+        },
+        {
+          "start": "$7010007",
+          "end": "$7010007",
+          "description": "Directly read cartridge port data lines."
+        },
+        {
+          "start": "$7010008",
+          "end": "$7010008",
+          "description": "Directly read lower 8 cartridge address data lines."
+        },
+        {
+          "start": "$7010009",
+          "end": "$7010009",
+          "description": "Directly read upper 8 cartridge address data lines."
+        },
+        {
+          "start": "$7FEFFFF",
+          "end": "$7FEFFFF",
+          "description": "",
+          "breakdown": [
+            {
+              "start": 0,
+              "end": 0,
+              "description": "Enable/disable SFX cartridge emulation"
+            }
+          ]
+        },
+      ]
+    },
+    {
+      "start": "$8000000",
+      "end": "$FEFFFFF",
+      "description": "Slow Device memory (127MB)"
+    },
+    {
+      "start": "$FF7E000",
+      "end": "$FF7EFFF",
+      "description": "CHARWRITE VIC-IV CHARROM write area"
+    },
+    {
+      "start": "$FF80000",
+      "end": "$FF87FFF",
+      "description": "Colour RAM (32KB or 64KB)"
+    },
+    {
+      "start": "$FFCB000",
+      "end": "$FFCBFFF ",
+      "description": "Internal 1541 RAM access"
+    },
+    {
+      "start": "$FFCC000",
+      "end": "$FFCFFFF",
+      "description": "Internal 1541 ROM access"
+    },
+    {
+      "start": "$FFD6C00",
+      "end": "$FFD6DFF",
+      "description": "F011 floppy controller sector buffer"
+    },
+    {
+      "start": "$FFD6E00",
+      "end": "$FFD6FFF",
+      "description": "SD card direct access sector buffer"
+    },
+    {
+      "start": "$FFD7000",
+      "end": "$FFD7FFF",
+      "description": "I2C Peripherals for various targets",
+      "breakdown": [
+        {
+          "start": "$FFD70F0",
+          "end": "$FFD70F0",
+          "description": "ADC1 smoothed value (LSB)"
+        },
+        {
+          "start": "$FFD70F1",
+          "end": "$FFD70F1",
+          "description": "ADC1 smoothed value (MSB)"
+        },
+        {
+          "start": "$FFD70F2",
+          "end": "$FFD70F2",
+          "description": "ADC2 smoothed value (LSB)"
+        },
+        {
+          "start": "$FFD70F3",
+          "end": "$FFD70F3",
+          "description": "ADC2 smoothed value (MSB)"
+        },
+        {
+          "start": "$FFD70F4",
+          "end": "$FFD70F4",
+          "description": "ADC3 smoothed value (LSB)"
+        },
+        {
+          "start": "$FFD70F5",
+          "end": "$FFD70F5",
+          "description": "ADC3 smoothed value (MSB)"
+        },
+        {
+          "start": "$FFD7100",
+          "end": "$FFD7107",
+          "description": "UUID:UUID64 64-bit UUID. Can be used to seed ethernet MAC address"
+        },
+        {
+          "start": "$FFD7108",
+          "end": "$FFD71FF",
+          "description": "EDID:EDID E-EDID block (MEGA65 R3 and newer, only)"
+        },
+        {
+          "start": "$FFD7110",
+          "end": "$FFD713F",
+          "description": "RTC:RTC Real-time Clock",
+          "breakdown": [
+            {
+              "start": "$FFD7110",
+              "end": "$FFD7110",
+              "description": "RTC:RTCSEC Real-time Clock seconds value (binary coded decimal)"
+            },
+            {
+              "start": "$FFD7111",
+              "end": "$FFD7111",
+              "description": "RTC:RTCMIN Real-time Clock minutes value (binary coded decimal)"
+            },
+            {
+              "start": "$FFD7112",
+              "end": "$FFD7112",
+              "description": "RTC:RTCHOUR Real-time Clock hours value (binary coded decimal)"
+            },
+            {
+              "start": "$FFD7113",
+              "end": "$FFD7113",
+              "description": "RTC:RTCDAY Real-time Clock day of month value (binary coded decimal)"
+            },
+            {
+              "start": "$FFD7114",
+              "end": "$FFD7114",
+              "description": "RTC:RTCMONTH Real-time Clock month value (binary coded decimal)"
+            },
+            {
+              "start": "$FFD7115",
+              "end": "$FFD7115",
+              "description": "RTC:RTCYEAR Real-time Clock year value (binary coded decimal)"
+            },
+            {
+              "start": "$FFD7140",
+              "end": "$FFD717F",
+              "description": "RTC:NVRAM 64-bytes of non-volatile RAM. Can be used for storing machine configuration."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "start": "$FFDE800",
+      "end": "$FFDEFFF",
+      "description": "Ethernet RX buffer (read only)"
+    },
+    {
+      "start": "$FFDE800",
+      "end": "$FFDEFFF",
+      "description": "Ethernet TX buffer (write only)"
+    },
+    {
+      "start": "$FFDF000",
+      "end": "$FFDF000",
+      "description": "VFPGA width of CLB array (READ ONLY)"
+    },
+    {
+      "start": "$FFDF001",
+      "end": "$FFDF001",
+      "description": "VFPGA height of CLB array (READ ONLY)"
+    },
+    {
+      "start": "$FFDF002",
+      "end": "$FFDF002",
+      "description": "VFPGA Logical wire cardinality (READ ONLY)"
+    },
+    {
+      "start": "$FFDF003",
+      "end": "$FFDF003",
+      "description": "VFPGA number of LUTs per CLB (READ ONLY)"
+    },
+    {
+      "start": "$FFDF004",
+      "end": "$FFDF004",
+      "description": "VFPGA number of inputs per CLB (READ ONLY)"
+    },
+    {
+      "start": "$FFDF005",
+      "end": "$FFDF005",
+      "description": "VFPGA number of inputs per LUT (READ ONLY)"
+    },
+    {
+      "start": "$FFDF006",
+      "end": "$FFDF006",
+      "description": "VFPGA number of IO pins (READ ONLY)"
+    },
+    {
+      "start": "$FFDF007",
+      "end": "$FFDF007",
+      "description": "VFPGA number of bytes in bitstream (LSB) (READ ONLY)"
+    },
+    {
+      "start": "$FFDF008",
+      "end": "$FFDF008",
+      "description": "VFPGA number of bytes in bitstream (MSB) (READ ONLY)"
+    },
+    {
+      "start": "$FFDF009",
+      "end": "$FFDF009",
+      "description": "VFPGA number of bytes in snapshot (LSB) (READ ONLY)"
+    },
+    {
+      "start": "$FFDF00A",
+      "end": "$FFDF00A",
+      "description": "VFPGA number of bytes in snapshot (MSB) (READ ONLY)"
+    },
+    {
+      "start": "$FFDF00B",
+      "end": "$FFDF00B",
+      "description": "VFPGA flags",
+      "breakdown": [
+        {
+          "start": 0,
+          "end": 0,
+          "description": "VFPGA DMA engine present flag (READ ONLY)"
+        },
+        {
+          "start": 1,
+          "end": 1,
+          "description": "VFPGA memory access engine present flag (READ ONLY)"
+        },
+        {
+          "start": 2,
+          "end": 2,
+          "description": "VFPGA interrupt pin present flag (READ ONLY)"
+        },
+        {
+          "start": 3,
+          "end": 3,
+          "description": "VFPGA cycle count done flag (READ ONLY)"
+        },
+        {
+          "start": 4,
+          "end": 4,
+          "description": "VFPGA reset (1= VFPGA is held under reset)"
+        },
+        {
+          "start": 5,
+          "end": 5,
+          "description": "VFPGA clk_done_IE flag"
+        },
+        {
+          "start": 6,
+          "end": 6,
+          "description": "VFPGA global_interrupt_IE flag"
+        },
+        {
+          "start": 7,
+          "end": 7,
+          "description": "VFPGA global_interrupt flag (READ ONLY)"
+        },
+      ]
+    },
+    {
+      "start": "$FFDF00C",
+      "end": "$FFDF00C",
+      "description": "VFPGA SHA1 hash of architecture LSBs"
+    },
+    {
+      "start": "$FFDF00D",
+      "end": "$FFDF00D",
+      "description": "VFPGA SHA1 hash of architecture LSBs"
+    },
+    {
+      "start": "$FFDF00E",
+      "end": "$FFDF00E",
+      "description": "VFPGA SHA1 hash of architecture LSBs"
+    },
+    {
+      "start": "$FFDF00F",
+      "end": "$FFDF00F",
+      "description": "VFPGA SHA1 hash of architecture LSBs"
+    },
+    {
+      "start": "$FFDF010",
+      "end": "$FFDF010",
+      "description": "VFPGA logical clock divisor (LSB)"
+    },
+    {
+      "start": "$FFDF011",
+      "end": "$FFDF011",
+      "description": "VFPGA logical clock divisor (MSB)"
+    },
+    {
+      "start": "$FFDF012",
+      "end": "$FFDF012",
+      "description": "VFPGA cycle clock counter (LSB)"
+    },
+    {
+      "start": "$FFDF013",
+      "end": "$FFDF013",
+      "description": "VFPGA cycle clock counter (SSB)"
+    },
+    {
+      "start": "$FFDF014",
+      "end": "$FFDF014",
+      "description": "VFPGA cycle clock counter (MSB)"
+    },
+    {
+      "start": "$FFDF015",
+      "end": "$FFDF015",
+      "description": "VFPGA config access register: Reads or writes single byte of bitstream/state snapshot vector"
+    },
+    {
+      "start": "$FFDF020",
+      "end": "$FFDF02F",
+      "description": "VFPGA read output pins, with automatic ACK to FPGA on input bits 8-14 for $FFDF020-$FFDF026"
+    },
+    {
+      "start": "$FFDF030",
+      "end": "$FFDF03F",
+      "description": "VFPGA input registers, with auto acknowledgement of reads by toggling input bits 0-6 when $FFDF030-$FFD036 are read"
+    },
+    {
+      "start": "$FFF8000",
+      "end": "$FFFBFFF",
+      "description": "SUMMARY:HYPERVISOR 16KB Hyppo/Hypervisor ROM",
+      "breakdown": [
+        {
+          "start": "$FFF8000",
+          "end": "$FFF80FC",
+          "description": "Hypervisor entry point when $D640-$D67F is written"
+        },
+        {
+          "start": "$FFF8100",
+          "end": "$FFF8100",
+          "description": "Hypervisor entry point on reset (trap $40)"
+        },
+        {
+          "start": "$FFF8104",
+          "end": "$FFF8104",
+          "description": "Hypervisor entry point on reset (trap $41)"
+        },
+        {
+          "start": "$FFF8108",
+          "end": "$FFF8108",
+          "description": "Hypervisor entry point on reset (trap $42)"
+        },
+        {
+          "start": "$FFF810C",
+          "end": "$FFF810C",
+          "description": "Hypervisor entry point on reset (trap $43)"
+        },
+        {
+          "start": "$FFF8110",
+          "end": "$FFF8110",
+          "description": "Hypervisor entry point on reset (trap $44)"
+        },
+        {
+          "start": "$FFF8114",
+          "end": "$FFF8114",
+          "description": "Hypervisor entry point on reset (trap $45)"
+        }
+      ]
+    }
+  ],
+  "ioMemory": {
+    
+  },
+  "defaultConfig": {
+    "POR":{},
+    "c64": {}
+  }
+}
